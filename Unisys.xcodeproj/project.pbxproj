@@ -9,14 +9,20 @@
 /* Begin PBXBuildFile section */
 		E2FA4BC52865F2F2004D8FC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FA4BC42865F2F2004D8FC5 /* AppDelegate.swift */; };
 		E2FA4BC72865F2F2004D8FC5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FA4BC62865F2F2004D8FC5 /* SceneDelegate.swift */; };
-		E2FA4BC92865F2F3004D8FC5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FA4BC82865F2F2004D8FC5 /* ViewController.swift */; };
-		E2FA4BCC2865F2F3004D8FC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2FA4BCA2865F2F3004D8FC5 /* Main.storyboard */; };
 		E2FA4BCF2865F2F3004D8FC5 /* Unisys.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E2FA4BCD2865F2F3004D8FC5 /* Unisys.xcdatamodeld */; };
 		E2FA4BD12865F2F4004D8FC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2FA4BD02865F2F4004D8FC5 /* Assets.xcassets */; };
 		E2FA4BD42865F2F4004D8FC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2FA4BD22865F2F4004D8FC5 /* LaunchScreen.storyboard */; };
 		E2FA4BDF2865F2F5004D8FC5 /* UnisysTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FA4BDE2865F2F5004D8FC5 /* UnisysTests.swift */; };
 		E2FA4BE92865F2F5004D8FC5 /* UnisysUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FA4BE82865F2F5004D8FC5 /* UnisysUITests.swift */; };
 		E2FA4BEB2865F2F5004D8FC5 /* UnisysUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FA4BEA2865F2F5004D8FC5 /* UnisysUITestsLaunchTests.swift */; };
+		E2FA4BFF2865F5E8004D8FC5 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FA4BFB2865F5E8004D8FC5 /* HomeRouter.swift */; };
+		E2FA4C002865F5E8004D8FC5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FA4BFC2865F5E8004D8FC5 /* HomeViewController.swift */; };
+		E2FA4C012865F5E8004D8FC5 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FA4BFD2865F5E8004D8FC5 /* HomeViewModel.swift */; };
+		E2FA4C022865F5E8004D8FC5 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2FA4BFE2865F5E8004D8FC5 /* HomeViewController.xib */; };
+		E2FA4C072865F5F7004D8FC5 /* DetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FA4C032865F5F7004D8FC5 /* DetailsRouter.swift */; };
+		E2FA4C082865F5F7004D8FC5 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FA4C042865F5F7004D8FC5 /* DetailsViewController.swift */; };
+		E2FA4C092865F5F7004D8FC5 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FA4C052865F5F7004D8FC5 /* DetailsViewModel.swift */; };
+		E2FA4C0A2865F5F7004D8FC5 /* DetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2FA4C062865F5F7004D8FC5 /* DetailsViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,8 +46,6 @@
 		E2FA4BC12865F2F2004D8FC5 /* Unisys.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Unisys.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2FA4BC42865F2F2004D8FC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2FA4BC62865F2F2004D8FC5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E2FA4BC82865F2F2004D8FC5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E2FA4BCB2865F2F3004D8FC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E2FA4BCE2865F2F3004D8FC5 /* Unisys.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Unisys.xcdatamodel; sourceTree = "<group>"; };
 		E2FA4BD02865F2F4004D8FC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E2FA4BD32865F2F4004D8FC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +55,14 @@
 		E2FA4BE42865F2F5004D8FC5 /* UnisysUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnisysUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2FA4BE82865F2F5004D8FC5 /* UnisysUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnisysUITests.swift; sourceTree = "<group>"; };
 		E2FA4BEA2865F2F5004D8FC5 /* UnisysUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnisysUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E2FA4BFB2865F5E8004D8FC5 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		E2FA4BFC2865F5E8004D8FC5 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		E2FA4BFD2865F5E8004D8FC5 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		E2FA4BFE2865F5E8004D8FC5 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		E2FA4C032865F5F7004D8FC5 /* DetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsRouter.swift; sourceTree = "<group>"; };
+		E2FA4C042865F5F7004D8FC5 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		E2FA4C052865F5F7004D8FC5 /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
+		E2FA4C062865F5F7004D8FC5 /* DetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,14 +113,10 @@
 		E2FA4BC32865F2F2004D8FC5 /* Unisys */ = {
 			isa = PBXGroup;
 			children = (
-				E2FA4BC42865F2F2004D8FC5 /* AppDelegate.swift */,
-				E2FA4BC62865F2F2004D8FC5 /* SceneDelegate.swift */,
-				E2FA4BC82865F2F2004D8FC5 /* ViewController.swift */,
-				E2FA4BCA2865F2F3004D8FC5 /* Main.storyboard */,
-				E2FA4BD02865F2F4004D8FC5 /* Assets.xcassets */,
-				E2FA4BD22865F2F4004D8FC5 /* LaunchScreen.storyboard */,
-				E2FA4BD52865F2F4004D8FC5 /* Info.plist */,
-				E2FA4BCD2865F2F3004D8FC5 /* Unisys.xcdatamodeld */,
+				E2FA4BF72865F5A2004D8FC5 /* App */,
+				E2FA4C0C2865F8CB004D8FC5 /* Networking */,
+				E2FA4BF82865F5B5004D8FC5 /* UI */,
+				E2FA4C0B2865F615004D8FC5 /* Resources */,
 			);
 			path = Unisys;
 			sourceTree = "<group>";
@@ -128,6 +136,64 @@
 				E2FA4BEA2865F2F5004D8FC5 /* UnisysUITestsLaunchTests.swift */,
 			);
 			path = UnisysUITests;
+			sourceTree = "<group>";
+		};
+		E2FA4BF72865F5A2004D8FC5 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				E2FA4BC42865F2F2004D8FC5 /* AppDelegate.swift */,
+				E2FA4BC62865F2F2004D8FC5 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		E2FA4BF82865F5B5004D8FC5 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				E2FA4BFA2865F5D2004D8FC5 /* Details */,
+				E2FA4BF92865F5CA004D8FC5 /* Home */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		E2FA4BF92865F5CA004D8FC5 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				E2FA4BFB2865F5E8004D8FC5 /* HomeRouter.swift */,
+				E2FA4BFD2865F5E8004D8FC5 /* HomeViewModel.swift */,
+				E2FA4BFC2865F5E8004D8FC5 /* HomeViewController.swift */,
+				E2FA4BFE2865F5E8004D8FC5 /* HomeViewController.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		E2FA4BFA2865F5D2004D8FC5 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				E2FA4C032865F5F7004D8FC5 /* DetailsRouter.swift */,
+				E2FA4C052865F5F7004D8FC5 /* DetailsViewModel.swift */,
+				E2FA4C042865F5F7004D8FC5 /* DetailsViewController.swift */,
+				E2FA4C062865F5F7004D8FC5 /* DetailsViewController.xib */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		E2FA4C0B2865F615004D8FC5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E2FA4BD52865F2F4004D8FC5 /* Info.plist */,
+				E2FA4BCD2865F2F3004D8FC5 /* Unisys.xcdatamodeld */,
+				E2FA4BD22865F2F4004D8FC5 /* LaunchScreen.storyboard */,
+				E2FA4BD02865F2F4004D8FC5 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E2FA4C0C2865F8CB004D8FC5 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,7 +302,8 @@
 			files = (
 				E2FA4BD42865F2F4004D8FC5 /* LaunchScreen.storyboard in Resources */,
 				E2FA4BD12865F2F4004D8FC5 /* Assets.xcassets in Resources */,
-				E2FA4BCC2865F2F3004D8FC5 /* Main.storyboard in Resources */,
+				E2FA4C0A2865F5F7004D8FC5 /* DetailsViewController.xib in Resources */,
+				E2FA4C022865F5E8004D8FC5 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,10 +328,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2FA4BC92865F2F3004D8FC5 /* ViewController.swift in Sources */,
 				E2FA4BC52865F2F2004D8FC5 /* AppDelegate.swift in Sources */,
+				E2FA4C082865F5F7004D8FC5 /* DetailsViewController.swift in Sources */,
+				E2FA4C012865F5E8004D8FC5 /* HomeViewModel.swift in Sources */,
 				E2FA4BCF2865F2F3004D8FC5 /* Unisys.xcdatamodeld in Sources */,
 				E2FA4BC72865F2F2004D8FC5 /* SceneDelegate.swift in Sources */,
+				E2FA4C072865F5F7004D8FC5 /* DetailsRouter.swift in Sources */,
+				E2FA4C092865F5F7004D8FC5 /* DetailsViewModel.swift in Sources */,
+				E2FA4BFF2865F5E8004D8FC5 /* HomeRouter.swift in Sources */,
+				E2FA4C002865F5E8004D8FC5 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,14 +373,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		E2FA4BCA2865F2F3004D8FC5 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E2FA4BCB2865F2F3004D8FC5 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		E2FA4BD22865F2F4004D8FC5 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -442,10 +506,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Unisys/Info.plist;
+				INFOPLIST_FILE = Unisys/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -469,10 +532,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Unisys/Info.plist;
+				INFOPLIST_FILE = Unisys/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
