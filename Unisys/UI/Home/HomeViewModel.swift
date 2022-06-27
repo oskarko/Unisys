@@ -81,8 +81,7 @@ private extension HomeViewModel {
                 self.articleItems = newsResponse.articleItems
                 self.view?.reloadData()
             case let .failure(error):
-                print(error.localizedDescription)
-                //self.router?.showAlert(for: .error)
+                self.router?.showAlert(error: error)
             }
         })
     }

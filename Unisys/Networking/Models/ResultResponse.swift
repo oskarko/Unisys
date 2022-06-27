@@ -11,5 +11,5 @@ import Foundation
 
 enum ResultResponse<T> {
     case success(T)
-    case failure(NetworkError)
+    case failure(APIErrorResponse)
 }

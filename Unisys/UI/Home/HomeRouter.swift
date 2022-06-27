@@ -45,4 +45,12 @@ class HomeRouter {
             self.viewController?.navigationController?.pushViewController(detailsView, animated: true)
         }
     }
+    
+    func showAlert(error: APIErrorResponse) {
+        DispatchQueue.main.async {
+            let alertView = AlertRouter.getViewController(error: error)
+            alertView.modalPresentationStyle = .custom
+            self.viewController?.present(alertView, animated: false)
+        }
+    }
 }

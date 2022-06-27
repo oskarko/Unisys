@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		E257278528675C4D00F07E19 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E257278428675C4D00F07E19 /* APIRequest.swift */; };
 		E257278728675C9A00F07E19 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = E257278628675C9A00F07E19 /* HTTPMethod.swift */; };
-		E257278928675CE300F07E19 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E257278828675CE300F07E19 /* NetworkError.swift */; };
 		E257278B28675D4200F07E19 /* ResultResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E257278A28675D4200F07E19 /* ResultResponse.swift */; };
 		E257278D28675DAA00F07E19 /* NetworkRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = E257278C28675DAA00F07E19 /* NetworkRequester.swift */; };
 		E257278F28675DE600F07E19 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E257278E28675DE600F07E19 /* NetworkRequest.swift */; };
@@ -31,6 +30,11 @@
 		E29532C92869AE3F0033CB84 /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29532C82869AE3F0033CB84 /* ReachabilityManager.swift */; };
 		E29532CC2869B6D90033CB84 /* ArticleItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29532CA2869B6D90033CB84 /* ArticleItem+CoreDataClass.swift */; };
 		E29532CD2869B6D90033CB84 /* ArticleItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29532CB2869B6D90033CB84 /* ArticleItem+CoreDataProperties.swift */; };
+		E29532CF2869C4AB0033CB84 /* APIErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29532CE2869C4AB0033CB84 /* APIErrorResponse.swift */; };
+		E29532D52869C88A0033CB84 /* AlertRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29532D12869C88A0033CB84 /* AlertRouter.swift */; };
+		E29532D62869C88A0033CB84 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29532D22869C88A0033CB84 /* AlertViewController.swift */; };
+		E29532D72869C88A0033CB84 /* AlertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29532D32869C88A0033CB84 /* AlertViewModel.swift */; };
+		E29532D82869C88A0033CB84 /* AlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E29532D42869C88A0033CB84 /* AlertViewController.xib */; };
 		E2FA4BC52865F2F2004D8FC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FA4BC42865F2F2004D8FC5 /* AppDelegate.swift */; };
 		E2FA4BC72865F2F2004D8FC5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FA4BC62865F2F2004D8FC5 /* SceneDelegate.swift */; };
 		E2FA4BCF2865F2F3004D8FC5 /* Unisys.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E2FA4BCD2865F2F3004D8FC5 /* Unisys.xcdatamodeld */; };
@@ -69,7 +73,6 @@
 /* Begin PBXFileReference section */
 		E257278428675C4D00F07E19 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		E257278628675C9A00F07E19 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
-		E257278828675CE300F07E19 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		E257278A28675D4200F07E19 /* ResultResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultResponse.swift; sourceTree = "<group>"; };
 		E257278C28675DAA00F07E19 /* NetworkRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequester.swift; sourceTree = "<group>"; };
 		E257278E28675DE600F07E19 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
@@ -91,6 +94,11 @@
 		E29532C82869AE3F0033CB84 /* ReachabilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityManager.swift; sourceTree = "<group>"; };
 		E29532CA2869B6D90033CB84 /* ArticleItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ArticleItem+CoreDataClass.swift"; sourceTree = "<group>"; };
 		E29532CB2869B6D90033CB84 /* ArticleItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ArticleItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		E29532CE2869C4AB0033CB84 /* APIErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIErrorResponse.swift; sourceTree = "<group>"; };
+		E29532D12869C88A0033CB84 /* AlertRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertRouter.swift; sourceTree = "<group>"; };
+		E29532D22869C88A0033CB84 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
+		E29532D32869C88A0033CB84 /* AlertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewModel.swift; sourceTree = "<group>"; };
+		E29532D42869C88A0033CB84 /* AlertViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertViewController.xib; sourceTree = "<group>"; };
 		E2FA4BC12865F2F2004D8FC5 /* Unisys.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Unisys.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2FA4BC42865F2F2004D8FC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2FA4BC62865F2F2004D8FC5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -143,8 +151,8 @@
 			children = (
 				E257278428675C4D00F07E19 /* APIRequest.swift */,
 				E257278628675C9A00F07E19 /* HTTPMethod.swift */,
-				E257278828675CE300F07E19 /* NetworkError.swift */,
 				E257278A28675D4200F07E19 /* ResultResponse.swift */,
+				E29532CE2869C4AB0033CB84 /* APIErrorResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -207,6 +215,17 @@
 				E29532C82869AE3F0033CB84 /* ReachabilityManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		E29532D02869C86F0033CB84 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				E29532D12869C88A0033CB84 /* AlertRouter.swift */,
+				E29532D32869C88A0033CB84 /* AlertViewModel.swift */,
+				E29532D22869C88A0033CB84 /* AlertViewController.swift */,
+				E29532D42869C88A0033CB84 /* AlertViewController.xib */,
+			);
+			path = Alert;
 			sourceTree = "<group>";
 		};
 		E2FA4BB82865F2F2004D8FC5 = {
@@ -272,6 +291,7 @@
 		E2FA4BF82865F5B5004D8FC5 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				E29532D02869C86F0033CB84 /* Alert */,
 				E2FA4BFA2865F5D2004D8FC5 /* Details */,
 				E2FA4BF92865F5CA004D8FC5 /* Home */,
 			);
@@ -433,6 +453,7 @@
 				E2FA4C0A2865F5F7004D8FC5 /* DetailsViewController.xib in Resources */,
 				E2FA4C022865F5E8004D8FC5 /* HomeViewController.xib in Resources */,
 				E25727992867615F00F07E19 /* HomeCell.xib in Resources */,
+				E29532D82869C88A0033CB84 /* AlertViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,8 +481,10 @@
 				E29532C92869AE3F0033CB84 /* ReachabilityManager.swift in Sources */,
 				E2FA4BC52865F2F2004D8FC5 /* AppDelegate.swift in Sources */,
 				E2FA4C082865F5F7004D8FC5 /* DetailsViewController.swift in Sources */,
+				E29532D72869C88A0033CB84 /* AlertViewModel.swift in Sources */,
 				E295329928698D6C0033CB84 /* AppDateFormatter.swift in Sources */,
 				E2FA4C012865F5E8004D8FC5 /* HomeViewModel.swift in Sources */,
+				E29532CF2869C4AB0033CB84 /* APIErrorResponse.swift in Sources */,
 				E257278728675C9A00F07E19 /* HTTPMethod.swift in Sources */,
 				E257278F28675DE600F07E19 /* NetworkRequest.swift in Sources */,
 				E2FA4BCF2865F2F3004D8FC5 /* Unisys.xcdatamodeld in Sources */,
@@ -479,11 +502,12 @@
 				E29532C72869AC7B0033CB84 /* Reachability.swift in Sources */,
 				E29532C52869A6DF0033CB84 /* String+Ext.swift in Sources */,
 				E2FA4BFF2865F5E8004D8FC5 /* HomeRouter.swift in Sources */,
-				E257278928675CE300F07E19 /* NetworkError.swift in Sources */,
 				E25727A02867659D00F07E19 /* HomeService.swift in Sources */,
 				E257278528675C4D00F07E19 /* APIRequest.swift in Sources */,
+				E29532D62869C88A0033CB84 /* AlertViewController.swift in Sources */,
 				E2FA4C002865F5E8004D8FC5 /* HomeViewController.swift in Sources */,
 				E257278D28675DAA00F07E19 /* NetworkRequester.swift in Sources */,
+				E29532D52869C88A0033CB84 /* AlertRouter.swift in Sources */,
 				E29532A7286992950033CB84 /* CoreDataManager.swift in Sources */,
 				E25727A42867682E00F07E19 /* NewsResponse.swift in Sources */,
 				E29532CD2869B6D90033CB84 /* ArticleItem+CoreDataProperties.swift in Sources */,

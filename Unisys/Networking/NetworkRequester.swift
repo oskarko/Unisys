@@ -20,7 +20,7 @@ struct NetworkRequester {
     func requestService<T: Decodable>(request: NetworkRequest, completion: @escaping (ResultResponse<T>) -> Void) {
         session.dataTask(with: request.request, completionHandler: { data, response, requestError in
             if let requestError = requestError {
-                completion(.failure(.default(description: requestError.localizedDescription)))
+                completion(.failure(.init(message: requestError.localizedDescription)))
                 return
             }
             guard let dataResponse = data else {
@@ -31,15 +31,15 @@ struct NetworkRequester {
             // handling errors
             if let urlResponse = response as? HTTPURLResponse {
                 switch urlResponse.statusCode {
-                case 401:
-                    completion(.failure(.error401))
-                    return
-                case 404:
-                    completion(.failure(.error404))
-                    return
-                case 500:
-                    completion(.failure(.error500))
-                    return
+                case 400...530:
+                    do {
+                        let error = try mapResponse(data: dataResponse, dataType: APIErrorResponse.self)
+                        completion(.failure(error))
+                        return
+                    } catch {
+                        completion(.failure(.init(message: error.localizedDescription)))
+                        return
+                    }
                 default: break
                 }
             }
