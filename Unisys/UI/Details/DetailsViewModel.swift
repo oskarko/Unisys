@@ -14,34 +14,34 @@ class DetailsViewModel {
     
     weak var view: DetailsViewControllerProtocol?
     var router: DetailsRouter?
-    private var article: Article
+    private var article: ArticleItem
 
     // MARK: - Lifecycle
 
-    init(_ article: Article) {
+    init(_ article: ArticleItem) {
         self.article = article
     }
     
     // MARK: - Helpers
     
     func getSourceName() -> String {
-        article.source.name
+        article.sourceName ?? ""
     }
     
     func getTitle() -> String {
-        article.title
+        article.title ?? ""
     }
     
     func getDescription() -> String {
-        article.description
+        article.desc ?? ""
     }
     
     func getURLToImageString() -> String {
-        article.urlToImage
+        article.urlToImage ?? ""
     }
     
     func getDateString() -> String {
-        AppDateFormatter.shared.mediumDateTimeString(from: article.publishedAt)
+        AppDateFormatter.shared.mediumDateTimeString(from: article.publishedAt ?? Date())
     }
     
 }

@@ -14,25 +14,54 @@ class HomeViewModel {
     
     weak var view: HomeViewControllerProtocol?
     var router: HomeRouter?
-    private var articles: [Article] = []
+    private var articleItems: [ArticleItem] = []
     private var service: HomeServiceProtocol
+    private var reachabilityManager: ReachabilityProtocol
+    private var coreDataManager: CoreDataProtocol
 
     // MARK: - Lifecycle
 
-    init(_ service: HomeServiceProtocol = HomeService()) {
+    init(_ service: HomeServiceProtocol = HomeService(),
+         reachabilityManager: ReachabilityProtocol = ReachabilityManager.shared,
+         coreDataManager: CoreDataProtocol = CoreDataManager.shared) {
         self.service = service
+        self.reachabilityManager = reachabilityManager
+        self.coreDataManager = coreDataManager
     }
     
     // MARK: - Helpers
     
-    func fetchNews() {
+    func viewDidLoad() {
+        reachabilityManager.isReachable() ? fetchNews() : loadNews()
+    }
+    
+    func numberOfRows(in section: Int) -> Int {
+        articleItems.count
+    }
+    
+    func getNews(at indexPath: IndexPath) -> ArticleItem? {
+        guard indexPath.row < articleItems.count else { return nil }
+        
+        return articleItems[indexPath.row]
+    }
+    
+    func didSelectRow(at indexPath: IndexPath) {
+        guard indexPath.row < articleItems.count else { return }
+        
+        let selectedArticle = articleItems[indexPath.row]
+        router?.showDetails(article: selectedArticle)
+    }
+}
+
+private extension HomeViewModel {
+    
+    private func fetchNews() {
         service.fetchNews(completionHandler: { [weak self] result in
             guard let self = self else { return }
 
-            //HUDManager.dismiss()
             switch result {
             case let .success(newsResponse):
-                self.articles = newsResponse.articles
+                self.articleItems = newsResponse.articleItems
                 self.view?.reloadData()
             case let .failure(error):
                 print(error.localizedDescription)
@@ -41,20 +70,8 @@ class HomeViewModel {
         })
     }
     
-    func numberOfRows(in section: Int) -> Int {
-        articles.count
-    }
-    
-    func getNews(at indexPath: IndexPath) -> Article? {
-        guard indexPath.row < articles.count else { return nil }
-        
-        return articles[indexPath.row]
-    }
-    
-    func didSelectRow(at indexPath: IndexPath) {
-        guard indexPath.row < articles.count else { return }
-        
-        let selectedArticle = articles[indexPath.row]
-        router?.showDetails(article: selectedArticle)
+    private func loadNews() {
+        articleItems = coreDataManager.fetch()
+        view?.reloadData()
     }
 }

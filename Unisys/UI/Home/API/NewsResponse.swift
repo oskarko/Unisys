@@ -14,6 +14,15 @@ struct NewsResponse: Codable {
     let totalResults: Int
     let articles: [Article]
     
+    var articleItems: [ArticleItem] {
+        return articles.compactMap { article in
+            let articleItem = CoreDataManager.shared.createArticleItem(with: article)
+            articleItem.article = article
+            
+            return articleItem
+        }
+    }
+    
     enum CodingKeys: String, CodingKey {
         case status
         case totalResults

@@ -34,12 +34,22 @@ class HomeCell: UITableViewCell {
     
     // MARK: - Helpers
     
-    func configure(with article: Article?) {
+    func configure(with article: ArticleItem?) {
         guard let article = article else { return }
         
         newsTitleLabel.text = article.title
-        newsDescriptionLabel.text = article.description
-        newsImageView.downloadImage(url: article.urlToImage)
+        newsDescriptionLabel.text = article.desc
+        if let imageData = article.image {
+            newsImageView.image = UIImage(data: imageData)
+        } else {
+            newsImageView.downloadImage(url: article.urlToImage ?? "") {
+                // Save image to CoreData
+                DispatchQueue.main.async {
+                    article.image = self.newsImageView.image?.pngData()
+                }
+                CoreDataManager.shared.save()
+            }
+        }
     }
     
 }

@@ -29,7 +29,7 @@ class HomeViewController: UIViewController {
         
         setUpTableView()
         configureUI()
-        viewModel.fetchNews()
+        viewModel.viewDidLoad()
     }
     
 

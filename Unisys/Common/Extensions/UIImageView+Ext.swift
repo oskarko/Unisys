@@ -11,21 +11,20 @@ import UIKit
 
 extension UIImageView {
     
-    func downloadImage(url: String) {
+    func downloadImage(url: String, completion: (() -> Void)? = nil) {
         guard !url.isEmpty, let documentURL = URL(string: url) else {
-            self.setImage(nil)
+            self.setImage(UIImage(named: "no-internet"))
             return
         }
         
         DispatchQueue(label: "ImageDownloadQueue").async {
             if let data = NSData(contentsOf: documentURL) {
                 self.setImage(UIImage(data: data as Data))
+                completion?()
             } else {
-                print("No image to download: ", url)
-                self.setImage(nil)
+                self.setImage(UIImage(named: "no-internet"))
             }
         }
-        
     }
     
 }

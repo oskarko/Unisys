@@ -41,46 +41,15 @@ class AppDateFormatter {
         return df
     }()
     
-    private func dateFrom(string: String) -> Date {
-        let df = DateFormatter()
-        df.locale = Locale.autoupdatingCurrent
-        df.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
-        
-        return df.date(from: string) ?? Date()
-    }
-
-    // mediumDate
-    
     func mediumDateString(from date: Date) -> String {
         return mediumDateFormatter.string(from: date)
     }
     
-    func mediumDateString(from string: String) -> String {
-        let date = dateFrom(string: string)
-        
-        return mediumDateFormatter.string(from: date)
-    }
-    
-    // mediumTime
     func mediumTimeString(from date: Date) -> String {
         return mediumTimeFormatter.string(from: date)
     }
     
-    func mediumTimeString(from string: String) -> String {
-        let date = dateFrom(string: string)
-        
-        return mediumTimeFormatter.string(from: date)
-    }
-    
-    // mediumDateTime
-    
     func mediumDateTimeString(from date: Date) -> String {
-        return mediumDateTimeFormatter.string(from: date)
-    }
-    
-    func mediumDateTimeString(from string: String) -> String {
-        let date = dateFrom(string: string)
-        
         return mediumDateTimeFormatter.string(from: date)
     }
     
