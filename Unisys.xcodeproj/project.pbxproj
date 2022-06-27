@@ -24,6 +24,7 @@
 		E25727A628676A0000F07E19 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25727A528676A0000F07E19 /* Constants.swift */; };
 		E2953294286979290033CB84 /* UIImageView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2953293286979290033CB84 /* UIImageView+Ext.swift */; };
 		E2953296286989830033CB84 /* UILabel+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2953295286989820033CB84 /* UILabel+Ext.swift */; };
+		E295329928698D6C0033CB84 /* AppDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E295329828698D6C0033CB84 /* AppDateFormatter.swift */; };
 		E2FA4BC52865F2F2004D8FC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FA4BC42865F2F2004D8FC5 /* AppDelegate.swift */; };
 		E2FA4BC72865F2F2004D8FC5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FA4BC62865F2F2004D8FC5 /* SceneDelegate.swift */; };
 		E2FA4BCF2865F2F3004D8FC5 /* Unisys.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E2FA4BCD2865F2F3004D8FC5 /* Unisys.xcdatamodeld */; };
@@ -77,6 +78,7 @@
 		E25727A528676A0000F07E19 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E2953293286979290033CB84 /* UIImageView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Ext.swift"; sourceTree = "<group>"; };
 		E2953295286989820033CB84 /* UILabel+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Ext.swift"; sourceTree = "<group>"; };
+		E295329828698D6C0033CB84 /* AppDateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDateFormatter.swift; sourceTree = "<group>"; };
 		E2FA4BC12865F2F2004D8FC5 /* Unisys.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Unisys.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2FA4BC42865F2F2004D8FC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2FA4BC62865F2F2004D8FC5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 		E257279A2867629100F07E19 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				E295329728698D550033CB84 /* Managers */,
 				E257279B2867638F00F07E19 /* Extensions */,
 				E25727A528676A0000F07E19 /* Constants.swift */,
 			);
@@ -180,6 +183,14 @@
 				E25727A32867682E00F07E19 /* NewsResponse.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		E295329728698D550033CB84 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				E295329828698D6C0033CB84 /* AppDateFormatter.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		E2FA4BB82865F2F2004D8FC5 = {
@@ -430,6 +441,7 @@
 			files = (
 				E2FA4BC52865F2F2004D8FC5 /* AppDelegate.swift in Sources */,
 				E2FA4C082865F5F7004D8FC5 /* DetailsViewController.swift in Sources */,
+				E295329928698D6C0033CB84 /* AppDateFormatter.swift in Sources */,
 				E2FA4C012865F5E8004D8FC5 /* HomeViewModel.swift in Sources */,
 				E257278728675C9A00F07E19 /* HTTPMethod.swift in Sources */,
 				E257278F28675DE600F07E19 /* NetworkRequest.swift in Sources */,

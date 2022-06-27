@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailsViewController" customModule="Unisys" customModuleProvider="target">
             <connections>
+                <outlet property="dateLabel" destination="sQt-pa-e3A" id="sI7-gj-Noj"/>
                 <outlet property="descriptionLabel" destination="Vy5-Pz-07i" id="305-Mk-Ged"/>
                 <outlet property="descriptionLabelHeight" destination="hQJ-Sb-pTZ" id="GTf-qH-En8"/>
                 <outlet property="newsImageView" destination="P9X-I4-Cks" id="2Kr-EQ-0iv"/>
@@ -29,7 +30,7 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="zbk-Be-ajZ">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="674"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="711"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hL5-Ms-mSR">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="232"/>
@@ -89,6 +90,27 @@
                                         <constraint firstItem="Vy5-Pz-07i" firstAttribute="top" secondItem="vvG-85-52w" secondAttribute="top" constant="8" id="Sg8-GD-dIR"/>
                                         <constraint firstAttribute="bottom" secondItem="Vy5-Pz-07i" secondAttribute="bottom" constant="16" id="vnD-HV-cR4"/>
                                         <constraint firstAttribute="trailing" secondItem="Vy5-Pz-07i" secondAttribute="trailing" constant="16" id="zNr-kw-TQq"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SJd-Xb-NpS">
+                                    <rect key="frame" x="0.0" y="674" width="414" height="37"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sQt-pa-e3A">
+                                            <rect key="frame" x="16" y="8" width="382" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="cgK-V7-hsW"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="sQt-pa-e3A" secondAttribute="bottom" constant="8" id="BbZ-Me-oIS"/>
+                                        <constraint firstAttribute="trailing" secondItem="sQt-pa-e3A" secondAttribute="trailing" constant="16" id="XyH-uk-Z7u"/>
+                                        <constraint firstItem="sQt-pa-e3A" firstAttribute="leading" secondItem="SJd-Xb-NpS" secondAttribute="leading" constant="16" id="ocO-hx-FxS"/>
+                                        <constraint firstItem="sQt-pa-e3A" firstAttribute="top" secondItem="SJd-Xb-NpS" secondAttribute="top" constant="8" id="wcJ-dr-0bS"/>
                                     </constraints>
                                 </view>
                             </subviews>

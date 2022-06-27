@@ -40,4 +40,8 @@ class DetailsViewModel {
         article.urlToImage
     }
     
+    func getDateString() -> String {
+        AppDateFormatter.shared.mediumDateTimeString(from: article.publishedAt)
+    }
+    
 }

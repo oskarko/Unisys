@@ -19,6 +19,7 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var newsImageView: UIImageView!
     @IBOutlet weak var descriptionLabelHeight: NSLayoutConstraint!
     @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
     
     // MARK: - Lifecycle
 
@@ -36,6 +37,7 @@ class DetailsViewController: UIViewController {
         titleLabelHeight.constant = titleLabel.requiredHeight
         descriptionLabel.text = viewModel.getDescription()
         descriptionLabelHeight.constant = descriptionLabel.requiredHeight
+        dateLabel.text = viewModel.getDateString()
         
         newsImageView.layer.masksToBounds = true
         newsImageView.layer.cornerRadius = 8
