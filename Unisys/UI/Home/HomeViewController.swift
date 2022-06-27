@@ -21,12 +21,14 @@ class HomeViewController: UIViewController {
     var viewModel: HomeViewModel!
     
     @IBOutlet weak var tableView: UITableView!
+    let searchController = UISearchController()
     
     // MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setUpSearchController()
         setUpTableView()
         configureUI()
         viewModel.viewDidLoad()
@@ -37,6 +39,19 @@ class HomeViewController: UIViewController {
 
     
     // MARK: - Helpers
+    
+    private func setUpSearchController() {
+        searchController.loadViewIfNeeded()
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.enablesReturnKeyAutomatically = false
+        searchController.searchBar.returnKeyType = .done
+        definesPresentationContext = true
+        
+        navigationItem.searchController = searchController
+        navigationItem.hidesSearchBarWhenScrolling = false
+        searchController.searchBar.delegate = self
+    }
     
     private func setUpTableView() {
         tableView.register(UINib(nibName: HomeCell.identifier, bundle: nil),
@@ -81,6 +96,15 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         viewModel.didSelectRow(at: indexPath)
     }
+}
+
+// MARK: - UISearchResultsUpdating, UISearchBarDelegate
+
+extension HomeViewController: UISearchResultsUpdating, UISearchBarDelegate {
+    func updateSearchResults(for searchController: UISearchController) {
+        viewModel.updateSearchResults(for: searchController.searchBar.text)
+    }
+    
 }
 
 // MARK: - HomeViewControllerProtocol

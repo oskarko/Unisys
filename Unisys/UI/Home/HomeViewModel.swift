@@ -15,9 +15,14 @@ class HomeViewModel {
     weak var view: HomeViewControllerProtocol?
     var router: HomeRouter?
     private var articleItems: [ArticleItem] = []
+    private var filteredArticleItems: [ArticleItem] = []
     private var service: HomeServiceProtocol
     private var reachabilityManager: ReachabilityProtocol
     private var coreDataManager: CoreDataProtocol
+    
+    private var isSearchMode: Bool {
+        !filteredArticleItems.isEmpty
+    }
 
     // MARK: - Lifecycle
 
@@ -36,20 +41,32 @@ class HomeViewModel {
     }
     
     func numberOfRows(in section: Int) -> Int {
-        articleItems.count
+        isSearchMode ? filteredArticleItems.count : articleItems.count
     }
     
     func getNews(at indexPath: IndexPath) -> ArticleItem? {
-        guard indexPath.row < articleItems.count else { return nil }
+        let articles = isSearchMode ? filteredArticleItems : articleItems
+        guard indexPath.row < articles.count else { return nil }
         
-        return articleItems[indexPath.row]
+        return articles[indexPath.row]
     }
     
     func didSelectRow(at indexPath: IndexPath) {
-        guard indexPath.row < articleItems.count else { return }
+        let articles = isSearchMode ? filteredArticleItems : articleItems
+        guard indexPath.row < articles.count else { return }
         
-        let selectedArticle = articleItems[indexPath.row]
+        let selectedArticle = articles[indexPath.row]
         router?.showDetails(article: selectedArticle)
+    }
+    
+    func updateSearchResults(for text: String?) {
+        if let text = text {
+            filteredArticleItems = articleItems.filter({ $0.title?.lowercased().contains(text.lowercased()) ?? false })
+        } else {
+            filteredArticleItems.removeAll()
+        }
+        
+        view?.reloadData()
     }
 }
 
