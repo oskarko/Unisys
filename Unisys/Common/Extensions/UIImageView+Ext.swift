@@ -1,5 +1,5 @@
 //
-//  ImageView+Ext.swift
+//  UIImageView+Ext.swift
 //  Unisys
 //
 //  Created by Oscar R. Garrucho.

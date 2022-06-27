@@ -14,7 +14,30 @@ class DetailsViewModel {
     
     weak var view: DetailsViewControllerProtocol?
     var router: DetailsRouter?
+    private var article: Article
+
+    // MARK: - Lifecycle
+
+    init(_ article: Article) {
+        self.article = article
+    }
     
     // MARK: - Helpers
+    
+    func getSourceName() -> String {
+        article.source.name
+    }
+    
+    func getTitle() -> String {
+        article.title
+    }
+    
+    func getDescription() -> String {
+        article.description
+    }
+    
+    func getURLToImageString() -> String {
+        article.urlToImage
+    }
     
 }

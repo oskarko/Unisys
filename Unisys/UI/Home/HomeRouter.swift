@@ -41,7 +41,7 @@ class HomeRouter {
     
     func showDetails(article: Article) {
         DispatchQueue.main.async {
-            let detailsView = DetailsRouter.getViewController()
+            let detailsView = DetailsRouter.getViewController(for: article)
             self.viewController?.navigationController?.pushViewController(detailsView, animated: true)
         }
     }

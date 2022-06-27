@@ -44,8 +44,7 @@ class HomeViewController: UIViewController {
     }
 
     private func configureUI() {
-        view.backgroundColor = .systemPurple
-
+        title = "Unysis News Reader"
     }
     
 }

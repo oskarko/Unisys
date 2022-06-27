@@ -8,16 +8,17 @@
 
 import UIKit
 
-protocol DetailsViewControllerProtocol: AnyObject {
-
-}
-
 class DetailsViewController: UIViewController {
     
     // MARK: - Properties
     
     var viewModel: DetailsViewModel!
     
+    @IBOutlet weak var titleLabelHeight: NSLayoutConstraint!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var newsImageView: UIImageView!
+    @IBOutlet weak var descriptionLabelHeight: NSLayoutConstraint!
+    @IBOutlet weak var descriptionLabel: UILabel!
     
     // MARK: - Lifecycle
 
@@ -27,21 +28,23 @@ class DetailsViewController: UIViewController {
         configureUI()
     }
     
-
-    // MARK: - Selectors
-
-    
     // MARK: - Helpers
 
     private func configureUI() {
-        view.backgroundColor = .systemPurple
-
+        title = viewModel.getSourceName()
+        titleLabel.text = viewModel.getTitle()
+        titleLabelHeight.constant = titleLabel.requiredHeight
+        descriptionLabel.text = viewModel.getDescription()
+        descriptionLabelHeight.constant = descriptionLabel.requiredHeight
+        
+        newsImageView.layer.masksToBounds = true
+        newsImageView.layer.cornerRadius = 8
+        newsImageView.downloadImage(url: viewModel.getURLToImageString())
     }
     
 }
 
 // MARK: - DetailsViewControllerProtocol
 
-extension DetailsViewController: DetailsViewControllerProtocol {
-
-}
+protocol DetailsViewControllerProtocol: AnyObject { }
+extension DetailsViewController: DetailsViewControllerProtocol { }
