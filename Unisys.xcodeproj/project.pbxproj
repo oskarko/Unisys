@@ -35,6 +35,13 @@
 		E29532D62869C88A0033CB84 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29532D22869C88A0033CB84 /* AlertViewController.swift */; };
 		E29532D72869C88A0033CB84 /* AlertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29532D32869C88A0033CB84 /* AlertViewModel.swift */; };
 		E29532D82869C88A0033CB84 /* AlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E29532D42869C88A0033CB84 /* AlertViewController.xib */; };
+		E2CB4469286A181C00750711 /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CB4468286A181C00750711 /* HomeViewModelTests.swift */; };
+		E2CB446B286A183C00750711 /* MockHomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CB446A286A183C00750711 /* MockHomeRouter.swift */; };
+		E2CB446D286A185700750711 /* MockHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CB446C286A185700750711 /* MockHomeView.swift */; };
+		E2CB446F286A186500750711 /* MockHomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CB446E286A186500750711 /* MockHomeService.swift */; };
+		E2CB4471286A1C6900750711 /* MockReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CB4470286A1C6900750711 /* MockReachabilityManager.swift */; };
+		E2CB4473286A1C7B00750711 /* MockCoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CB4472286A1C7B00750711 /* MockCoreDataManager.swift */; };
+		E2CB4476286A2A9300750711 /* MockFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CB4475286A2A9300750711 /* MockFactory.swift */; };
 		E2FA4BC52865F2F2004D8FC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FA4BC42865F2F2004D8FC5 /* AppDelegate.swift */; };
 		E2FA4BC72865F2F2004D8FC5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FA4BC62865F2F2004D8FC5 /* SceneDelegate.swift */; };
 		E2FA4BCF2865F2F3004D8FC5 /* Unisys.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E2FA4BCD2865F2F3004D8FC5 /* Unisys.xcdatamodeld */; };
@@ -99,6 +106,13 @@
 		E29532D22869C88A0033CB84 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		E29532D32869C88A0033CB84 /* AlertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewModel.swift; sourceTree = "<group>"; };
 		E29532D42869C88A0033CB84 /* AlertViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertViewController.xib; sourceTree = "<group>"; };
+		E2CB4468286A181C00750711 /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
+		E2CB446A286A183C00750711 /* MockHomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHomeRouter.swift; sourceTree = "<group>"; };
+		E2CB446C286A185700750711 /* MockHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHomeView.swift; sourceTree = "<group>"; };
+		E2CB446E286A186500750711 /* MockHomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHomeService.swift; sourceTree = "<group>"; };
+		E2CB4470286A1C6900750711 /* MockReachabilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockReachabilityManager.swift; sourceTree = "<group>"; };
+		E2CB4472286A1C7B00750711 /* MockCoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCoreDataManager.swift; sourceTree = "<group>"; };
+		E2CB4475286A2A9300750711 /* MockFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFactory.swift; sourceTree = "<group>"; };
 		E2FA4BC12865F2F2004D8FC5 /* Unisys.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Unisys.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2FA4BC42865F2F2004D8FC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2FA4BC62865F2F2004D8FC5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -228,11 +242,57 @@
 			path = Alert;
 			sourceTree = "<group>";
 		};
-		E2FA4BB82865F2F2004D8FC5 = {
+		E2CB4463286A16F300750711 /* DataBase */ = {
 			isa = PBXGroup;
 			children = (
 				E29532CA2869B6D90033CB84 /* ArticleItem+CoreDataClass.swift */,
 				E29532CB2869B6D90033CB84 /* ArticleItem+CoreDataProperties.swift */,
+				E2FA4BCD2865F2F3004D8FC5 /* Unisys.xcdatamodeld */,
+			);
+			path = DataBase;
+			sourceTree = "<group>";
+		};
+		E2CB4464286A177B00750711 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				E2CB4465286A178600750711 /* UI */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		E2CB4465286A178600750711 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				E2CB4466286A178C00750711 /* Home */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		E2CB4466286A178C00750711 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				E2CB4467286A17F000750711 /* Mocks */,
+				E2CB4468286A181C00750711 /* HomeViewModelTests.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		E2CB4467286A17F000750711 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				E2CB4472286A1C7B00750711 /* MockCoreDataManager.swift */,
+				E2CB4470286A1C6900750711 /* MockReachabilityManager.swift */,
+				E2CB446E286A186500750711 /* MockHomeService.swift */,
+				E2CB446A286A183C00750711 /* MockHomeRouter.swift */,
+				E2CB446C286A185700750711 /* MockHomeView.swift */,
+				E2CB4475286A2A9300750711 /* MockFactory.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		E2FA4BB82865F2F2004D8FC5 = {
+			isa = PBXGroup;
+			children = (
 				E2FA4BC32865F2F2004D8FC5 /* Unisys */,
 				E2FA4BDD2865F2F5004D8FC5 /* UnisysTests */,
 				E2FA4BE72865F2F5004D8FC5 /* UnisysUITests */,
@@ -254,6 +314,7 @@
 			isa = PBXGroup;
 			children = (
 				E2FA4BF72865F5A2004D8FC5 /* App */,
+				E2CB4463286A16F300750711 /* DataBase */,
 				E257279A2867629100F07E19 /* Common */,
 				E2FA4C0C2865F8CB004D8FC5 /* Networking */,
 				E2FA4BF82865F5B5004D8FC5 /* UI */,
@@ -265,6 +326,7 @@
 		E2FA4BDD2865F2F5004D8FC5 /* UnisysTests */ = {
 			isa = PBXGroup;
 			children = (
+				E2CB4464286A177B00750711 /* Source */,
 				E2FA4BDE2865F2F5004D8FC5 /* UnisysTests.swift */,
 			);
 			path = UnisysTests;
@@ -326,7 +388,6 @@
 			isa = PBXGroup;
 			children = (
 				E2FA4BD52865F2F4004D8FC5 /* Info.plist */,
-				E2FA4BCD2865F2F3004D8FC5 /* Unisys.xcdatamodeld */,
 				E2FA4BD22865F2F4004D8FC5 /* LaunchScreen.storyboard */,
 				E2FA4BD02865F2F4004D8FC5 /* Assets.xcassets */,
 			);
@@ -521,6 +582,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2FA4BDF2865F2F5004D8FC5 /* UnisysTests.swift in Sources */,
+				E2CB4473286A1C7B00750711 /* MockCoreDataManager.swift in Sources */,
+				E2CB446B286A183C00750711 /* MockHomeRouter.swift in Sources */,
+				E2CB4469286A181C00750711 /* HomeViewModelTests.swift in Sources */,
+				E2CB446F286A186500750711 /* MockHomeService.swift in Sources */,
+				E2CB4471286A1C6900750711 /* MockReachabilityManager.swift in Sources */,
+				E2CB4476286A2A9300750711 /* MockFactory.swift in Sources */,
+				E2CB446D286A185700750711 /* MockHomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
