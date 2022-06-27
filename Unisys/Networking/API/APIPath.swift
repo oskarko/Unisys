@@ -1,0 +1,20 @@
+//
+//  APIPath.swift
+//  Unisys
+//
+//  Created by Oscar R. Garrucho.
+//  Linkedin: https://www.linkedin.com/in/oscar-garrucho/
+//  Copyright © 2022 Oscar R. Garrucho. All rights reserved.
+//
+
+import Foundation
+
+enum APIPath {
+    case news
+    
+    var rawValue: String {
+        switch self {
+        case .news: return "/v2/everything"
+        }
+    }
+}

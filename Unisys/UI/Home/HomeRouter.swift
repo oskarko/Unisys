@@ -39,4 +39,10 @@ class HomeRouter {
     
     // MARK: - Routes
     
+    func showDetails(article: Article) {
+        DispatchQueue.main.async {
+            let detailsView = DetailsRouter.getViewController()
+            self.viewController?.navigationController?.pushViewController(detailsView, animated: true)
+        }
+    }
 }
