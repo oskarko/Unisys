@@ -8,6 +8,11 @@ Technical test for Unisys company
 - Using Coordinators as a pattern for views transictions make really EASY our live and clean our code a lot. This MVVM + Coordinator is like a pseudo VIPER but with less boilerplate code.
 - Just for lack of time, I did NOT add any other extra feature: Dark mode,  localized strings...
 
+# How to test
+- Clone the project
+- Get an APIKey from [https://newsapi.org](https://newsapi.org/) and paste it in the Constants file.
+- Run the project 🥳
+
 
 Screenshots:
 
@@ -15,12 +20,15 @@ Error handle:
 
 ![alt tag1](images/image1.png)
 
+
 Fetch and show details:
 
 ![alt tag2](images/image2.png)
 ![alt tag3](images/image3.png)
 
+
 Filter and show details:
+
 ![alt tag4](images/image4.png)
 ![alt tag5](images/image5.png)
 
