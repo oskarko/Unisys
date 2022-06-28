@@ -59,7 +59,7 @@ class HomeViewController: UIViewController {
     }
 
     private func configureUI() {
-        title = "Unysis News Reader"
+        title = "Unisys News Reader"
     }
     
 }
